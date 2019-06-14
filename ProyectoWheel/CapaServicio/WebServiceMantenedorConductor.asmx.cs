@@ -19,7 +19,7 @@ namespace CapaServicio
     // [System.Web.Script.Services.ScriptService]
     public class WebServiceMantenedorConductor : System.Web.Services.WebService
     {
-
+        /*
         [WebMethod(Description = "inserta los datos de un conductor")]
         public void insertarConductor(Conductor conductor)
         {
@@ -28,21 +28,21 @@ namespace CapaServicio
         }
 
         [WebMethod(Description = "eliminar los datos del conductor")]
-        public void eliminiarConductor(Conductor conductor)
+        public void eliminiarConductor(Conducto conductor)
         {
             NegocioConductor auxNegocioConductor = new NegocioConductor();
             auxNegocioConductor.insertarConductor(conductor);
         }
 
         [WebMethod(Description = "Actualiza los datos del conductor")]
-        public void actualizarConductor(Conductor conductor)
+        public void actualizarConductor(Conducto conductor)
         {
             NegocioConductor auxNegocioConductor = new NegocioConductor();
             auxNegocioConductor.insertarConductor(conductor);
         }
 
         [WebMethod(Description = "busca un conductor")]
-        public Conductor buscarConductor(String rut)
+        public Conducto buscarConductor(String rut)
         {
             NegocioConductor auxNegocioConductor = new NegocioConductor();
             return auxNegocioConductor.buscarConductor(rut);
@@ -53,6 +53,6 @@ namespace CapaServicio
         {
             NegocioConductor auxNegocioConductor = new NegocioConductor();
             return auxNegocioConductor.retornaConductor();
-        }
+        }*/
     }
 }

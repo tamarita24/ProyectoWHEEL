@@ -6,22 +6,134 @@ using System.Threading.Tasks;
 
 namespace CapaDTO
 {
-    public class Conductor
+    public class Conductor : IPersistentBase
     {
-        private String rut;
-        private String nombres;
-        private String apellido_paterno;
-        private String apellido_materno;
-        private String sexo;
-        private int telefono;
-        
+       
+        public override bool IsEqual(IPersistentBase p)
+        {
+            throw new NotImplementedException();
+        }
 
-        public string Rut { get => rut; set => rut = value; }
-        public string Nombres { get => nombres; set => nombres = value; }
-        public string Apellido_paterno { get => apellido_paterno; set => apellido_paterno = value; }
-        public string Apellido_materno { get => apellido_materno; set => apellido_materno = value; }
-        public string Sexo { get => sexo; set => sexo = value; }
-        public int Telefono { get => telefono; set => telefono = value; }
-        
+        //private string rut;
+
+        public string Rut
+        {
+            get { return rut; }
+            set { rut = value; }
+        }
+
+        //private string nombres;
+
+        public string Nombres
+        {
+            get { return nombres; }
+            set { nombres = value; }
+        }
+
+        //private string apellido_paterno;
+
+        public string Apellido_paterno
+        {
+            get { return apellido_paterno; }
+            set { apellido_paterno = value; }
+        }
+
+        //private string apellido_materno;
+
+        public string Apellido_materno
+        {
+            get { return apellido_materno; }
+            set { apellido_materno = value; }
+        }
+
+        //private string sexo;
+
+        public string Sexo
+        {
+            get { return sexo; }
+            set { sexo = value; }
+        }
+
+        //private int telefono;
+
+        public int Telefono
+        {
+            get { return telefono; }
+            set { telefono = value; }
+        }
+
+        protected string rut;
+        protected string nombres;
+        protected string apellido_paterno;
+        protected string apellido_materno;
+        protected string sexo;
+        protected int telefono;
+
     }
+
+
+    public class FilterConductor : IPersistentBase
+    {
+
+
+        public override bool IsEqual(IPersistentBase p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Rut
+        {
+            get { return rut; }
+            set { rut = value; }
+        }
+
+        //private string nombres;
+
+        public string Nombres
+        {
+            get { return nombres; }
+            set { nombres = value; }
+        }
+
+        //private string apellido_paterno;
+
+        public string Apellido_paterno
+        {
+            get { return apellido_paterno; }
+            set { apellido_paterno = value; }
+        }
+
+        //private string apellido_materno;
+
+        public string Apellido_materno
+        {
+            get { return apellido_materno; }
+            set { apellido_materno = value; }
+        }
+
+        //private string sexo;
+
+        public string Sexo
+        {
+            get { return sexo; }
+            set { sexo = value; }
+        }
+
+        //private int telefono;
+
+        public int Telefono
+        {
+            get { return telefono; }
+            set { telefono = value; }
+        }
+
+        protected string rut;
+        protected string nombres;
+        protected string apellido_paterno;
+        protected string apellido_materno;
+        protected string sexo;
+        protected int telefono;
+
+    }
+
 }
