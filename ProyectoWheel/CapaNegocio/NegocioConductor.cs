@@ -2,6 +2,7 @@
 using CapaDTO;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -19,11 +20,11 @@ namespace CapaNegocio
         public void configurarConexion()
         {
             this.Conec1 = new ConexionSQL();
-            this.Conec1.NombreBaseDatos = "Conductor";
-            this.Conec1.NombreTabla = "Cliente";
-            this.Conec1.CadenaConexion = "Data Source=TAMY-PC\\SQLEXPRESS;Initial Catalog=Prueba;Integrated Security=True";
-
-        }
+            this.Conec1.NombreBaseDatos = "Wheel";
+            this.Conec1.NombreTabla = "Conductor";
+            //this.Conec1.CadenaConexion = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Prueba;Integrated Security=True";
+            this.Conec1.CadenaConexion = ConfigurationManager.AppSettings["BDWheel"];
+        }//Fin configurar Conexion
 
         public void insertarConductor(Conductor conductor)
         {
@@ -34,7 +35,7 @@ namespace CapaNegocio
             this.Conec1.EsSelect = false;
             this.Conec1.conectar();
 
-        }
+        }//Fin agregar conductor
         
         public void eliminarConductor(string rut)
         {

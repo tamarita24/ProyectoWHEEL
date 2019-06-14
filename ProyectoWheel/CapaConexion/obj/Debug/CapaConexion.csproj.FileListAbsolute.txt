@@ -4,3 +4,9 @@ D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de p
 D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.csproj.CoreCompileInputs.cache
 D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.dll
 D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.pdb
+C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\bin\Debug\CapaConexion.dll
+C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\bin\Debug\CapaConexion.pdb
+C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.csprojResolveAssemblyReference.cache
+C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.csproj.CoreCompileInputs.cache
+C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.dll
+C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.pdb
