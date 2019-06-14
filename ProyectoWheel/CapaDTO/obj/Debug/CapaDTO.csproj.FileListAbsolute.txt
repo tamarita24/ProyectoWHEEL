@@ -1,0 +1,6 @@
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaDTO\bin\Debug\CapaDTO.dll
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaDTO\bin\Debug\CapaDTO.pdb
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.csprojResolveAssemblyReference.cache
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.csproj.CoreCompileInputs.cache
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.dll
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.pdb

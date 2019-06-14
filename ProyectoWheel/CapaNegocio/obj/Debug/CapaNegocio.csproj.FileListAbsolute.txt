@@ -1,0 +1,11 @@
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaNegocio\bin\Debug\CapaNegocio.dll
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaNegocio\bin\Debug\CapaNegocio.pdb
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaNegocio\bin\Debug\CapaConexion.dll
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaNegocio\bin\Debug\CapaDTO.dll
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaNegocio\bin\Debug\CapaConexion.pdb
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaNegocio\bin\Debug\CapaDTO.pdb
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaNegocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaNegocio\obj\Debug\CapaNegocio.dll
+D:\INGENIERIA INFORMATICA DUOC\Ing.informatica_DUOC\5_ semestre\Integracion de plataforma\Proyecto_2_consumidor\ProyectoWheel\CapaNegocio\obj\Debug\CapaNegocio.pdb
