@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CapaGUIWindows.Properties
+namespace CapaGUI.Properties
 {
 
 

@@ -19,21 +19,42 @@ namespace CapaServicio
     // [System.Web.Script.Services.ScriptService]
     public class WebServiceMantenedorConductor : System.Web.Services.WebService
     {
-        /*
-        [WebMethod(Description = "inserta los datos de un conductor")]
-        public void insertarConductor(Conductor conductor)
+        
+        [WebMethod(Description = "insertar un conductor")]
+        public ResponseTransaction insertarConductor(Conductor conductor)
         {
-            NegocioConductor auxNegocioConductor = new NegocioConductor();
-             auxNegocioConductor.insertarConductor(conductor);
+            try
+            {
+                NegocioConductor auxNegocioConductor = new NegocioConductor();
+                auxNegocioConductor.insertarConductor(conductor);
+                return new ResponseTransaction()
+                {
+                    Code = (int)WSException.Success,
+                    Description = "Transacción exitosa"
+                };
+            }
+            catch(Exception ex)
+            {
+                return new ResponseTransaction()
+                {
+                    Code = (int)WSException.EmptyAttribute,
+                    Description = ex.Message
+                };
+            }
+            
+
         }
 
+    
+        /*
         [WebMethod(Description = "eliminar los datos del conductor")]
-        public void eliminiarConductor(Conducto conductor)
+        public void eliminiarConductor(Conductor conductor)
         {
             NegocioConductor auxNegocioConductor = new NegocioConductor();
             auxNegocioConductor.insertarConductor(conductor);
         }
-
+        */
+        /*
         [WebMethod(Description = "Actualiza los datos del conductor")]
         public void actualizarConductor(Conducto conductor)
         {
@@ -54,5 +75,57 @@ namespace CapaServicio
             NegocioConductor auxNegocioConductor = new NegocioConductor();
             return auxNegocioConductor.retornaConductor();
         }*/
+
+         
+        /*
+        [WebMethod(Description = "inserta los datos de un conductor")]
+        public ResponseParameterConductor insertarConductor(RequestParameterConductor requestParameterConductor)
+        {
+            ResponseParameterConductor responseParameterConductor = new ResponseParameterConductor();
+            responseParameterConductor.ResponseTransaction = Validate.ValidateRequest(requestParameterConductor);
+            if (responseParameterConductor.ResponseTransaction.Code !=0)
+            {
+                
+                return responseParameterConductor;
+            }
+            else
+            {
+                try
+                {
+                    NegocioConductor auxNegocio = new NegocioConductor();
+                    
+                    //responseParameterConductor.Conductors = auxNegocio.insertarConductor(conductor);
+                    List<Conductor> conductors = auxNegocio.insertarConductor(responseParameterConductor);
+                    if (responseParameterConductor.Conductors. == null)
+                    {
+                        responseParameterConductor.ResponseTransaction = new ResponseTransaction()
+                        {
+                            Code = (int)WSException.Success,
+                            Description = "Transacción exitosa"
+                        };
+                        return responseParameterConductor;
+                    }
+                    else
+                    {
+                        responseParameterConductor.ResponseTransaction = new ResponseTransaction()
+                        {
+                            Code = (int)WSException.Success,
+                            Description = "Conductor ya Existe"
+                        };
+                    }
+                }
+                catch (Exception ex)
+                {
+                    responseParameterConductor.ResponseTransaction = new ResponseTransaction()
+                    {
+                        Code = (int)WSException.EmptyAttribute,
+                        Description = ex.Message
+                    };
+                    return responseParameterConductor; 
+                }
+            }
+            
+        }*/
+
     }
 }

@@ -1,0 +1,6 @@
+C:\Users\NATI\Desktop\DUOC\Integracion de plataformas\wheelapp\tercera_entrega\ProyectoWHEEL\ProyectoWheel\CapaGUI\obj\Debug\CapaGUI.csprojAssemblyReference.cache
+C:\Users\NATI\Desktop\DUOC\Integracion de plataformas\wheelapp\tercera_entrega\ProyectoWHEEL\ProyectoWheel\CapaGUI\obj\Debug\CapaGUI.MantenedorConductorCrear.resources
+C:\Users\NATI\Desktop\DUOC\Integracion de plataformas\wheelapp\tercera_entrega\ProyectoWHEEL\ProyectoWheel\CapaGUI\obj\Debug\CapaGUI.MantenedorConductorListar.resources
+C:\Users\NATI\Desktop\DUOC\Integracion de plataformas\wheelapp\tercera_entrega\ProyectoWHEEL\ProyectoWheel\CapaGUI\obj\Debug\CapaGUI.Properties.Resources.resources
+C:\Users\NATI\Desktop\DUOC\Integracion de plataformas\wheelapp\tercera_entrega\ProyectoWHEEL\ProyectoWheel\CapaGUI\obj\Debug\CapaGUI.csproj.GenerateResource.cache
+C:\Users\NATI\Desktop\DUOC\Integracion de plataformas\wheelapp\tercera_entrega\ProyectoWHEEL\ProyectoWheel\CapaGUI\obj\Debug\CapaGUI.csproj.CoreCompileInputs.cache
