@@ -236,26 +236,24 @@ namespace CapaGUI
         private void btnEditar_Click(object sender, EventArgs e)
         {
             ServiceConductor.WebServiceMantenedorConductorSoapClient auxServiceConductor = new ServiceConductor.WebServiceMantenedorConductorSoapClient();
-            ServiceConductor.Conductor auxConductor = new ServiceConductor.Conductor();
+            ServiceConductor.Conductor auxConductor2 = new ServiceConductor.Conductor();
 
-            auxConductor.Rut = this.txtRut.Text;
-            auxConductor.Nombres = this.txtNombre.Text;
-            auxConductor.Apellido_paterno = this.txtApPaterno.Text;
-            auxConductor.Apellido_materno = this.txtApMaterno.Text;
-
-            auxConductor.Telefono = Convert.ToInt32(this.txtTelefono.Text);
-
+            auxConductor2.Rut = this.txtRut.Text;
+            auxConductor2.Nombres = this.txtNombre.Text;
+            auxConductor2.Apellido_paterno = this.txtApPaterno.Text;
+            auxConductor2.Apellido_materno = this.txtApMaterno.Text;
             if (this.rbFemenino.Checked == true)
             {
-                auxConductor.Sexo = this.rbFemenino.Text;
+                auxConductor2.Sexo = this.rbFemenino.Text;
             }
             else if (this.rbMasculino.Checked == true)
             {
-                auxConductor.Sexo = this.rbMasculino.Text;
+                auxConductor2.Sexo = this.rbMasculino.Text;
             }
+            auxConductor2.Telefono = Convert.ToUInt16(this.txtTelefono.Text);
 
-            auxServiceConductor.actualizarConductorService(auxConductor);
-            MessageBox.Show("Datos Guardados ", "Sistema");
+            auxServiceConductor.actualizarConductorService(auxConductor2);
+            MessageBox.Show("Datos Actualizados ", "Sistema");
             this.limpiar();
 
             
@@ -266,7 +264,122 @@ namespace CapaGUI
             this.btnGuardar.Enabled = true;
 
             this.btnSalir.Text = "Salir";
-            
+            /*
+            try
+            {
+                if (this.txtIdCarrera.Text == "")
+                {
+                    MessageBox.Show("Ingrese un ID");
+                }
+                else
+                {
+                    if (this.btnEditar.Text.Equals("Buscar"))
+                    {
+                        ServicesCarrera.WebServiceCarreraSoapClient auxNegocioCarrera = new ServicesCarrera.WebServiceCarreraSoapClient();
+                        ServicesCarrera.Carrera auxCarrera = new ServicesCarrera.Carrera();
+
+                        if (auxNegocioCarrera.buscarCarreraService(Convert.ToInt32(this.txtIdCarrera.Text)).Id_carrera.Equals(0))
+                        {
+                            MessageBox.Show("El Id ingresado no existe");
+                        }
+                        else
+                        {
+                            auxCarrera = auxNegocioCarrera.buscarCarreraService(Convert.ToInt32(this.txtIdCarrera.Text));
+
+                            this.txtIdCarrera.Text = auxCarrera.Id_carrera.ToString();
+                            this.txtNombreCarrera.Text = auxCarrera.Nombre_carrera;
+                            this.btnEditar.Text = "Editar";
+                        }
+
+                    }
+                    else
+                    {
+                        if (this.btnEditar.Text.Equals("Editar"))
+                        {
+                            if (this.txtNombreCarrera.Text == "")
+                            {
+                                MessageBox.Show("Ingrese un nombre");
+                            }
+                            else
+                            {
+                                if (MessageBox.Show("Estas Seguro de actualizar ", "sistema", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                                {
+                                    ServicesCarrera.WebServiceCarreraSoapClient auxNegocioCarrera = new ServicesCarrera.WebServiceCarreraSoapClient();
+                                    ServicesCarrera.Carrera auxCarrera = new ServicesCarrera.Carrera();
+
+                                    auxCarrera.Id_carrera = Convert.ToInt32(this.txtIdCarrera.Text);
+                                    auxCarrera.Nombre_carrera = this.txtNombreCarrera.Text;
+                                    auxNegocioCarrera.actualizarCarreraService(auxCarrera);
+                                    MessageBox.Show("Datos actualizados exitosamente", "Sistema");
+                                    this.btnEditar.Text = "Buscar";
+                                    this.btnListar.Text = "Listar";
+                                    this.limpiar();
+                                    txtIdCarrera.Focus();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }*/
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ServiceConductor.WebServiceMantenedorConductorSoapClient auxServiceConductor = new ServiceConductor.WebServiceMantenedorConductorSoapClient();
+            ServiceConductor.Conductor auxConductor = new ServiceConductor.Conductor();
+
+
+            /*
+            auxConductor.Rut = auxServiceConductor.eliminiarConductorService(txtRut.Text);
+            */
+
+            /*
+            try
+            {
+                if (this.txtIdCarrera.Text == "")
+                {
+                    MessageBox.Show("Ingrese un Id");
+                }
+                else
+                {
+                    ServicesCarrera.WebServiceCarreraSoapClient auxNegocioCarrera = new ServicesCarrera.WebServiceCarreraSoapClient();
+
+
+                    if (auxNegocioCarrera.buscarCarreraService(Convert.ToInt32(this.txtIdCarrera.Text)).Id_carrera.Equals(0))
+                    {
+                        MessageBox.Show("El Id no existe");
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Estas Seguro de Eliminar ", "sistema", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+
+                            auxNegocioCarrera.eliminarCarreraService(Convert.ToInt32(this.txtIdCarrera.Text));
+                            MessageBox.Show("Carrera eliminada exitosamente", "Sistema");
+                            this.btnListar.Text = "Listar";
+                            this.limpiar();
+                            txtIdCarrera.Focus();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }*/
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            MantenedorConductorListar pListado = new MantenedorConductorListar();
+            pListado.ShowDialog();
         }
     }
 }

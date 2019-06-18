@@ -72,7 +72,7 @@ namespace CapaDTO
         */
     }
 
-
+    
     public class FilterConductor : IPersistentBase
     {
 
@@ -128,7 +128,7 @@ namespace CapaDTO
             set { telefono = value; }
         }
 
-        /*
+         /*
         protected string rut;
         protected string nombres;
         protected string apellido_paterno;

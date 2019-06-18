@@ -27,10 +27,10 @@ namespace CapaGUI.ServiceConductor {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/eliminiarConductorService", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IPersistentBase))]
-        CapaGUI.ServiceConductor.ResponseTransaction eliminiarConductorService(string rut);
+        void eliminiarConductorService(string rut);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/eliminiarConductorService", ReplyAction="*")]
-        System.Threading.Tasks.Task<CapaGUI.ServiceConductor.ResponseTransaction> eliminiarConductorServiceAsync(string rut);
+        System.Threading.Tasks.Task eliminiarConductorServiceAsync(string rut);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/actualizarConductorService", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -495,11 +495,11 @@ namespace CapaGUI.ServiceConductor {
             return base.Channel.insertarConductorServiceAsync(conductor);
         }
         
-        public CapaGUI.ServiceConductor.ResponseTransaction eliminiarConductorService(string rut) {
-            return base.Channel.eliminiarConductorService(rut);
+        public void eliminiarConductorService(string rut) {
+            base.Channel.eliminiarConductorService(rut);
         }
         
-        public System.Threading.Tasks.Task<CapaGUI.ServiceConductor.ResponseTransaction> eliminiarConductorServiceAsync(string rut) {
+        public System.Threading.Tasks.Task eliminiarConductorServiceAsync(string rut) {
             return base.Channel.eliminiarConductorServiceAsync(rut);
         }
         

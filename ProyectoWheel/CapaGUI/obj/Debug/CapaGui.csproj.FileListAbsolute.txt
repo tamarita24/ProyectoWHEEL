@@ -14,3 +14,4 @@ C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.pd
 C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\bin\Debug\CapaGUI.exe.config
 C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\bin\Debug\CapaGUI.exe
 C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\bin\Debug\CapaGUI.pdb
+C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.csprojResolveAssemblyReference.cache
