@@ -19,9 +19,10 @@ namespace CapaServicio
     // [System.Web.Script.Services.ScriptService]
     public class WebServiceMantenedorConductor : System.Web.Services.WebService
     {
+
         
         [WebMethod(Description = "insertar un conductor")]
-        public ResponseTransaction insertarConductor(Conductor conductor)
+        public ResponseTransaction insertarConductorService(Conductor conductor)
         {
             try
             {
@@ -33,50 +34,100 @@ namespace CapaServicio
                     Description = "Transacción exitosa"
                 };
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return new ResponseTransaction()
                 {
-                    Code = (int)WSException.EmptyAttribute,
-                    Description = ex.Message
+                    Code = (int)WSException.GeneralError,
+                    Description = string.Format("{0}-{1}", "Excepción General", ex.Message)
                 };
             }
             
-
         }
 
-    
-        /*
+
+
         [WebMethod(Description = "eliminar los datos del conductor")]
-        public void eliminiarConductor(Conductor conductor)
+        public ResponseTransaction eliminiarConductorService(string rut)
         {
-            NegocioConductor auxNegocioConductor = new NegocioConductor();
-            auxNegocioConductor.insertarConductor(conductor);
+            try
+            {
+                NegocioConductor auxNegocioConductor = new NegocioConductor();
+                auxNegocioConductor.eliminarConductor(rut);
+                return new ResponseTransaction()
+                {
+                    Code = (int)WSException.Success,
+                    Description = "Transacción exitosa"
+                };
+            }
+            catch (Exception ex)
+            {
+                return new ResponseTransaction()
+                {
+                    Code = (int)WSException.GeneralError,
+                    Description = string.Format("{0}-{1}", "Excepción General", ex.Message)
+                };
+            }
+
+
         }
-        */
+
+        [WebMethod(Description = "Actualiza los datos del conductor")]
+        public void actualizarConductorService(Conductor conductor)
+        {
+
+            NegocioConductor auxNegocioConductor = new NegocioConductor();
+            auxNegocioConductor.actualizarConductor(conductor);
+
+        }
+       
         /*
         [WebMethod(Description = "Actualiza los datos del conductor")]
-        public void actualizarConductor(Conducto conductor)
+        public ResponseTransaction actualizarConductorService(Conductor conductor)
         {
-            NegocioConductor auxNegocioConductor = new NegocioConductor();
-            auxNegocioConductor.insertarConductor(conductor);
-        }
+            try
+            {
+                NegocioConductor auxNegocioConductor = new NegocioConductor();
+                auxNegocioConductor.actualizarConductor(conductor);
+                return new ResponseTransaction()
+                {
+                    Code = (int)WSException.Success,
+                    Description = "Transacción exitosa"
+                };
+            }
+            catch (Exception ex)
+            {
+                return new ResponseTransaction()
+                {
+                    Code = (int)WSException.GeneralError,
+                    Description = string.Format("{0}-{1}", "Excepción General", ex.Message)
+                };
+            }
 
-        [WebMethod(Description = "busca un conductor")]
-        public Conducto buscarConductor(String rut)
-        {
-            NegocioConductor auxNegocioConductor = new NegocioConductor();
-            return auxNegocioConductor.buscarConductor(rut);
-        }
 
-        [WebMethod(Description = "Retorna un conductor")]
-        public DataSet retornaConductor()
-        {
-            NegocioConductor auxNegocioConductor = new NegocioConductor();
-            return auxNegocioConductor.retornaConductor();
         }*/
 
-         
+        [WebMethod(Description = "buscar un conductor")]
+        public Conductor buscarConductorService(String rut)
+        {
+            
+            NegocioConductor auxNegocioConductor = new NegocioConductor();
+            return auxNegocioConductor.buscarConductor(rut);
+
+        }
+
+        
+        [WebMethod(Description = "Retorna un conductor")]
+        public DataSet retornaConductorService()
+        {
+            
+                NegocioConductor auxNegocioConductor = new NegocioConductor();
+                return auxNegocioConductor.retornaConductor();
+              
+        }
+
+
+        
         /*
         [WebMethod(Description = "inserta los datos de un conductor")]
         public ResponseParameterConductor insertarConductor(RequestParameterConductor requestParameterConductor)
@@ -85,7 +136,7 @@ namespace CapaServicio
             responseParameterConductor.ResponseTransaction = Validate.ValidateRequest(requestParameterConductor);
             if (responseParameterConductor.ResponseTransaction.Code !=0)
             {
-                
+
                 return responseParameterConductor;
             }
             else
@@ -93,38 +144,30 @@ namespace CapaServicio
                 try
                 {
                     NegocioConductor auxNegocio = new NegocioConductor();
+
+                    //responseParameterConductor.Conductors = auxNegocio.insertarConductor(requestParameterConductor.FilterConductor);
+                    List<CapaDTO.Conductor> conductors = auxNegocio.insertarConductor(requestParameterConductor.FilterConductor);
+                    responseParameterConductor.ResponseTransaction = conductors;
                     
-                    //responseParameterConductor.Conductors = auxNegocio.insertarConductor(conductor);
-                    List<Conductor> conductors = auxNegocio.insertarConductor(responseParameterConductor);
-                    if (responseParameterConductor.Conductors. == null)
+                    responseParameterConductor.ResponseTransaction = new ResponseTransaction()
                     {
-                        responseParameterConductor.ResponseTransaction = new ResponseTransaction()
-                        {
-                            Code = (int)WSException.Success,
-                            Description = "Transacción exitosa"
-                        };
-                        return responseParameterConductor;
-                    }
-                    else
-                    {
-                        responseParameterConductor.ResponseTransaction = new ResponseTransaction()
-                        {
-                            Code = (int)WSException.Success,
-                            Description = "Conductor ya Existe"
-                        };
-                    }
+                        Code = (int)WSException.Success,
+                        Description = "Transacción exitosa"
+                    };
+                    return responseParameterConductor;
+
                 }
                 catch (Exception ex)
                 {
                     responseParameterConductor.ResponseTransaction = new ResponseTransaction()
                     {
-                        Code = (int)WSException.EmptyAttribute,
-                        Description = ex.Message
+                        Code = (int)WSException.GeneralError,
+                        Description = string.Format("{0}-{1}", "Excepción General", ex.Message)
                     };
-                    return responseParameterConductor; 
+                    return responseParameterConductor;
                 }
             }
-            
+
         }*/
 
     }

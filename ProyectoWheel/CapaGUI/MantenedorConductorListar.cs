@@ -16,5 +16,19 @@ namespace CapaGUI
         {
             InitializeComponent();
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            ServiceConductor.WebServiceMantenedorConductorSoapClient auxServiceConductor = new ServiceConductor.WebServiceMantenedorConductorSoapClient();
+            
+            this.dgvListarConductor.DataSource = auxServiceConductor.retornaConductorService();
+            this.dgvListarConductor.DataMember = "Conductor";
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            System.GC.Collect();
+        }
     }
 }

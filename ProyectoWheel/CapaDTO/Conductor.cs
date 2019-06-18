@@ -14,7 +14,7 @@ namespace CapaDTO
             throw new NotImplementedException();
         }
 
-        //private string rut;
+        private string rut;
 
         public string Rut
         {
@@ -22,7 +22,7 @@ namespace CapaDTO
             set { rut = value; }
         }
 
-        //private string nombres;
+        private string nombres;
 
         public string Nombres
         {
@@ -30,7 +30,7 @@ namespace CapaDTO
             set { nombres = value; }
         }
 
-        //private string apellido_paterno;
+        private string apellido_paterno;
 
         public string Apellido_paterno
         {
@@ -38,7 +38,7 @@ namespace CapaDTO
             set { apellido_paterno = value; }
         }
 
-        //private string apellido_materno;
+        private string apellido_materno;
 
         public string Apellido_materno
         {
@@ -46,7 +46,7 @@ namespace CapaDTO
             set { apellido_materno = value; }
         }
 
-        //private string sexo;
+        private string sexo;
 
         public string Sexo
         {
@@ -54,7 +54,7 @@ namespace CapaDTO
             set { sexo = value; }
         }
 
-        //private int telefono;
+        private int telefono;
 
         public int Telefono
         {
@@ -62,13 +62,14 @@ namespace CapaDTO
             set { telefono = value; }
         }
 
+        /*
         protected string rut;
         protected string nombres;
         protected string apellido_paterno;
         protected string apellido_materno;
         protected string sexo;
         protected int telefono;
-
+        */
     }
 
 
@@ -81,13 +82,13 @@ namespace CapaDTO
             throw new NotImplementedException();
         }
 
-        public string Rut
+        public string rut
         {
             get { return rut; }
             set { rut = value; }
         }
 
-        //private string nombres;
+        private string nombres;
 
         public string Nombres
         {
@@ -95,7 +96,7 @@ namespace CapaDTO
             set { nombres = value; }
         }
 
-        //private string apellido_paterno;
+        private string apellido_paterno;
 
         public string Apellido_paterno
         {
@@ -103,7 +104,7 @@ namespace CapaDTO
             set { apellido_paterno = value; }
         }
 
-        //private string apellido_materno;
+        private string apellido_materno;
 
         public string Apellido_materno
         {
@@ -111,7 +112,7 @@ namespace CapaDTO
             set { apellido_materno = value; }
         }
 
-        //private string sexo;
+        private string sexo;
 
         public string Sexo
         {
@@ -119,7 +120,7 @@ namespace CapaDTO
             set { sexo = value; }
         }
 
-        //private int telefono;
+        private int telefono;
 
         public int Telefono
         {
@@ -127,13 +128,14 @@ namespace CapaDTO
             set { telefono = value; }
         }
 
+        /*
         protected string rut;
         protected string nombres;
         protected string apellido_paterno;
         protected string apellido_materno;
         protected string sexo;
         protected int telefono;
-
+        */
     }
 
 }

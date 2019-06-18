@@ -10,5 +10,10 @@ namespace CapaDTO
     {
         public int Code { get; set; }
         public String Description { get; set; }
+
+        public static implicit operator ResponseTransaction(Conductor v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

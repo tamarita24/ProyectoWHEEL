@@ -14,7 +14,6 @@ namespace CapaDTO
         private String apellido_materno;
         private String sexo;
         private int telefono;
-        
 
         public string Rut { get => rut; set => rut = value; }
         public string Nombres { get => nombres; set => nombres = value; }
@@ -22,6 +21,5 @@ namespace CapaDTO
         public string Apellido_materno { get => apellido_materno; set => apellido_materno = value; }
         public string Sexo { get => sexo; set => sexo = value; }
         public int Telefono { get => telefono; set => telefono = value; }
-        
     }
 }

@@ -75,10 +75,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ejemplo.asmx" />
     <Content Include="Web.config" />
     <Content Include="WebServiceMantenedorConductor.asmx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ejemplo.asmx.cs">
+      <DependentUpon>ejemplo.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validate.cs" />
     <Compile Include="WebServiceMantenedorConductor.asmx.cs">

@@ -9,4 +9,3 @@ C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\bin\Debug\CapaC
 C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.csproj.CoreCompileInputs.cache
 C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.dll
 C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.pdb
-C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.csprojResolveAssemblyReference.cache
