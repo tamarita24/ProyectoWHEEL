@@ -10,3 +10,9 @@ C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.cs
 C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.dll
 C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.pdb
 C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.csprojResolveAssemblyReference.cache
+C:\Users\Walden\Desktop\ProyectoWHEEL\ProyectoWHEEL\ProyectoWheel\CapaDTO\bin\Debug\CapaDTO.dll
+C:\Users\Walden\Desktop\ProyectoWHEEL\ProyectoWHEEL\ProyectoWheel\CapaDTO\bin\Debug\CapaDTO.pdb
+C:\Users\Walden\Desktop\ProyectoWHEEL\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.csprojResolveAssemblyReference.cache
+C:\Users\Walden\Desktop\ProyectoWHEEL\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.csproj.CoreCompileInputs.cache
+C:\Users\Walden\Desktop\ProyectoWHEEL\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.dll
+C:\Users\Walden\Desktop\ProyectoWHEEL\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.pdb

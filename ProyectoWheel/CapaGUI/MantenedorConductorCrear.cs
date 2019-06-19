@@ -51,7 +51,7 @@ namespace CapaGUI
 
         public void desHabilitar()
         {
-            this.txtRut.Enabled = false;
+            //this.txtRut.Enabled = false;
             this.txtNombre.Enabled = false;
             this.txtApPaterno.Enabled = false;
             this.txtApMaterno.Enabled = false;
@@ -79,34 +79,35 @@ namespace CapaGUI
                 try
                 {
 
-                    ServiceConductor.WebServiceMantenedorConductorSoapClient auxServiceConductor = new ServiceConductor.WebServiceMantenedorConductorSoapClient();
-                    ServiceConductor.Conductor auxConductor = new ServiceConductor.Conductor();
-                    /*
-                    if(String.IsNullOrEmpty(txtRut.Text) || String.IsNullOrEmpty(txtNombre.Text)|| String.IsNullOrEmpty(txtApMaterno.Text)|| String.IsNullOrEmpty(txtApPaterno.Text) || String.IsNullOrEmpty(txtTelefono.Text) ||  this.rbFemenino.Checked == false || rbMasculino.Checked == false)
+                    
+                    if(String.IsNullOrEmpty(txtRut.Text) && String.IsNullOrEmpty(txtNombre.Text) && String.IsNullOrEmpty(txtApMaterno.Text)&& String.IsNullOrEmpty(txtApPaterno.Text) && String.IsNullOrEmpty(txtTelefono.Text) &&  this.rbFemenino.Checked == false && rbMasculino.Checked == false)
                     {
                         MessageBox.Show("Debe completar la información");
                         
                     }
                     else
-                    {*/
-                       
-                        auxConductor.Rut = this.txtRut.Text;
-                        auxConductor.Nombres = this.txtNombre.Text;
-                        auxConductor.Apellido_paterno = this.txtApPaterno.Text;
-                        auxConductor.Apellido_materno = this.txtApMaterno.Text;
-                        auxConductor.Telefono = Convert.ToInt32(this.txtTelefono.Text);
-
-                        if (this.rbFemenino.Checked == true)
-                        {
-                            auxConductor.Sexo = this.rbFemenino.Text;
-                        }
-                        else if (this.rbMasculino.Checked == true)
-                        {
-                            auxConductor.Sexo = this.rbMasculino.Text;
-                        }
+                    {
+                        ServiceConductor.WebServiceMantenedorConductorSoapClient auxServiceConductor = new ServiceConductor.WebServiceMantenedorConductorSoapClient();
+                        ServiceConductor.Conductor auxConductor = new ServiceConductor.Conductor();
+                        
 
                         if (String.IsNullOrEmpty(auxServiceConductor.buscarConductorService(auxConductor.Rut).Rut))
                         {
+                            auxConductor.Rut = this.txtRut.Text;
+                            auxConductor.Nombres = this.txtNombre.Text;
+                            auxConductor.Apellido_paterno = this.txtApPaterno.Text;
+                            auxConductor.Apellido_materno = this.txtApMaterno.Text;
+                            auxConductor.Telefono = Convert.ToInt32(this.txtTelefono.Text);
+
+                            if (this.rbFemenino.Checked == true)
+                            {
+                                auxConductor.Sexo = this.rbFemenino.Text;
+                            }
+                            else if (this.rbMasculino.Checked == true)
+                            {
+                                auxConductor.Sexo = this.rbMasculino.Text;
+                            }
+
                             auxServiceConductor.insertarConductorService(auxConductor);
                             MessageBox.Show("Datos Guardados ", "Sistema");
                             this.limpiar();
@@ -123,8 +124,8 @@ namespace CapaGUI
                         
                         this.btnSalir.Text = "Salir";
 
-                       /*
-                    }*/
+                       
+                    }
 
                 }
                 catch (Exception ex)
@@ -235,89 +236,54 @@ namespace CapaGUI
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            ServiceConductor.WebServiceMantenedorConductorSoapClient auxServiceConductor = new ServiceConductor.WebServiceMantenedorConductorSoapClient();
-            ServiceConductor.Conductor auxConductor2 = new ServiceConductor.Conductor();
-
-            auxConductor2.Rut = this.txtRut.Text;
-            auxConductor2.Nombres = this.txtNombre.Text;
-            auxConductor2.Apellido_paterno = this.txtApPaterno.Text;
-            auxConductor2.Apellido_materno = this.txtApMaterno.Text;
-            if (this.rbFemenino.Checked == true)
-            {
-                auxConductor2.Sexo = this.rbFemenino.Text;
-            }
-            else if (this.rbMasculino.Checked == true)
-            {
-                auxConductor2.Sexo = this.rbMasculino.Text;
-            }
-            auxConductor2.Telefono = Convert.ToUInt16(this.txtTelefono.Text);
-
-            auxServiceConductor.actualizarConductorService(auxConductor2);
-            MessageBox.Show("Datos Actualizados ", "Sistema");
-            this.limpiar();
-
-            
-            this.desHabilitar();
-            this.limpiar();
-            this.btnGuardar.Text = "Nuevo";
-            this.btnBuscar.Enabled = true;
-            this.btnGuardar.Enabled = true;
-
-            this.btnSalir.Text = "Salir";
-            /*
+           
             try
             {
-                if (this.txtIdCarrera.Text == "")
+                if (this.txtRut.Text == "")
                 {
-                    MessageBox.Show("Ingrese un ID");
+                    MessageBox.Show("Ingrese un Rut");
                 }
                 else
                 {
-                    if (this.btnEditar.Text.Equals("Buscar"))
+                    
+
+                    if (MessageBox.Show("Estas Seguro de actualizar ", "sistema", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        ServicesCarrera.WebServiceCarreraSoapClient auxNegocioCarrera = new ServicesCarrera.WebServiceCarreraSoapClient();
-                        ServicesCarrera.Carrera auxCarrera = new ServicesCarrera.Carrera();
+                        ServiceConductor.WebServiceMantenedorConductorSoapClient auxServiceConductor = new ServiceConductor.WebServiceMantenedorConductorSoapClient();
+                        ServiceConductor.Conductor auxConductor2 = new ServiceConductor.Conductor();
 
-                        if (auxNegocioCarrera.buscarCarreraService(Convert.ToInt32(this.txtIdCarrera.Text)).Id_carrera.Equals(0))
+                        auxConductor2.Rut = this.txtRut.Text;
+                        auxConductor2.Nombres = this.txtNombre.Text;
+                        auxConductor2.Apellido_paterno = this.txtApPaterno.Text;
+                        auxConductor2.Apellido_materno = this.txtApMaterno.Text;
+                        if (this.rbFemenino.Checked == true)
                         {
-                            MessageBox.Show("El Id ingresado no existe");
+                            auxConductor2.Sexo = this.rbFemenino.Text;
                         }
-                        else
+                        else if (this.rbMasculino.Checked == true)
                         {
-                            auxCarrera = auxNegocioCarrera.buscarCarreraService(Convert.ToInt32(this.txtIdCarrera.Text));
-
-                            this.txtIdCarrera.Text = auxCarrera.Id_carrera.ToString();
-                            this.txtNombreCarrera.Text = auxCarrera.Nombre_carrera;
-                            this.btnEditar.Text = "Editar";
+                            auxConductor2.Sexo = this.rbMasculino.Text;
                         }
 
-                    }
-                    else
-                    {
-                        if (this.btnEditar.Text.Equals("Editar"))
-                        {
-                            if (this.txtNombreCarrera.Text == "")
-                            {
-                                MessageBox.Show("Ingrese un nombre");
-                            }
-                            else
-                            {
-                                if (MessageBox.Show("Estas Seguro de actualizar ", "sistema", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                                {
-                                    ServicesCarrera.WebServiceCarreraSoapClient auxNegocioCarrera = new ServicesCarrera.WebServiceCarreraSoapClient();
-                                    ServicesCarrera.Carrera auxCarrera = new ServicesCarrera.Carrera();
+                        auxConductor2.Telefono = Convert.ToInt32(this.txtTelefono.Text);
 
-                                    auxCarrera.Id_carrera = Convert.ToInt32(this.txtIdCarrera.Text);
-                                    auxCarrera.Nombre_carrera = this.txtNombreCarrera.Text;
-                                    auxNegocioCarrera.actualizarCarreraService(auxCarrera);
-                                    MessageBox.Show("Datos actualizados exitosamente", "Sistema");
-                                    this.btnEditar.Text = "Buscar";
-                                    this.btnListar.Text = "Listar";
-                                    this.limpiar();
-                                    txtIdCarrera.Focus();
-                                }
-                            }
-                        }
+                        auxServiceConductor.actualizarConductorService(auxConductor2);
+                        MessageBox.Show("Datos Actualizados Exitosamente ", "Sistema");
+                        this.limpiar();
+
+                        this.desHabilitar();
+                        this.limpiar();
+                        this.btnGuardar.Text = "Nuevo";
+                        this.btnBuscar.Enabled = true;
+                        this.btnGuardar.Enabled = true;
+
+                        this.btnSalir.Text = "Salir";
+                        
+                        txtRut.Focus();
+
+
+                        
+                        
                     }
                 }
             }
@@ -331,40 +297,32 @@ namespace CapaGUI
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            ServiceConductor.WebServiceMantenedorConductorSoapClient auxServiceConductor = new ServiceConductor.WebServiceMantenedorConductorSoapClient();
-            ServiceConductor.Conductor auxConductor = new ServiceConductor.Conductor();
-
-
-            /*
-            auxConductor.Rut = auxServiceConductor.eliminiarConductorService(txtRut.Text);
-            */
-
-            /*
+                        
             try
             {
-                if (this.txtIdCarrera.Text == "")
+                if (this.txtRut.Text == "")
                 {
-                    MessageBox.Show("Ingrese un Id");
+                    MessageBox.Show("Ingrese un Rut");
                 }
                 else
                 {
-                    ServicesCarrera.WebServiceCarreraSoapClient auxNegocioCarrera = new ServicesCarrera.WebServiceCarreraSoapClient();
+                    ServiceConductor.WebServiceMantenedorConductorSoapClient auxServiceConductor = new ServiceConductor.WebServiceMantenedorConductorSoapClient();
+                    
 
-
-                    if (auxNegocioCarrera.buscarCarreraService(Convert.ToInt32(this.txtIdCarrera.Text)).Id_carrera.Equals(0))
+                    if (auxServiceConductor.buscarConductorService((this.txtRut.Text)).Rut.Equals(0))
                     {
-                        MessageBox.Show("El Id no existe");
+                        MessageBox.Show("El Rut no existe");
                     }
                     else
                     {
                         if (MessageBox.Show("Estas Seguro de Eliminar ", "sistema", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
 
-                            auxNegocioCarrera.eliminarCarreraService(Convert.ToInt32(this.txtIdCarrera.Text));
-                            MessageBox.Show("Carrera eliminada exitosamente", "Sistema");
+                            auxServiceConductor.eliminiarConductorService(this.txtRut.Text);
+                            MessageBox.Show("Conductor fue eliminada exitosamente", "Sistema");
                             this.btnListar.Text = "Listar";
                             this.limpiar();
-                            txtIdCarrera.Focus();
+                            txtRut.Focus();
                         }
                     }
                 }
@@ -373,7 +331,7 @@ namespace CapaGUI
             {
 
                 MessageBox.Show(ex.Message);
-            }*/
+            }
         }
 
         private void btnListar_Click(object sender, EventArgs e)

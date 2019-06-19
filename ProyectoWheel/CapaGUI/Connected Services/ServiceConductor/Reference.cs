@@ -27,10 +27,10 @@ namespace CapaGUI.ServiceConductor {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/eliminiarConductorService", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IPersistentBase))]
-        void eliminiarConductorService(string rut);
+        CapaGUI.ServiceConductor.ResponseTransaction eliminiarConductorService(string rut);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/eliminiarConductorService", ReplyAction="*")]
-        System.Threading.Tasks.Task eliminiarConductorServiceAsync(string rut);
+        System.Threading.Tasks.Task<CapaGUI.ServiceConductor.ResponseTransaction> eliminiarConductorServiceAsync(string rut);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/actualizarConductorService", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -58,7 +58,7 @@ namespace CapaGUI.ServiceConductor {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -152,7 +152,7 @@ namespace CapaGUI.ServiceConductor {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Conductor))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -415,7 +415,7 @@ namespace CapaGUI.ServiceConductor {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -495,11 +495,11 @@ namespace CapaGUI.ServiceConductor {
             return base.Channel.insertarConductorServiceAsync(conductor);
         }
         
-        public void eliminiarConductorService(string rut) {
-            base.Channel.eliminiarConductorService(rut);
+        public CapaGUI.ServiceConductor.ResponseTransaction eliminiarConductorService(string rut) {
+            return base.Channel.eliminiarConductorService(rut);
         }
         
-        public System.Threading.Tasks.Task eliminiarConductorServiceAsync(string rut) {
+        public System.Threading.Tasks.Task<CapaGUI.ServiceConductor.ResponseTransaction> eliminiarConductorServiceAsync(string rut) {
             return base.Channel.eliminiarConductorServiceAsync(rut);
         }
         

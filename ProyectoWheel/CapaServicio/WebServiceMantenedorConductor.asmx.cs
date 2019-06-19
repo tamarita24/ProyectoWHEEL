@@ -45,14 +45,15 @@ namespace CapaServicio
             
         }
 
+        /*
         [WebMethod(Description = "eliminar los datos del conductor")]
         public void eliminiarConductorService(string rut)
         {
             NegocioConductor auxNegocioConductor = new NegocioConductor();
             auxNegocioConductor.eliminarConductor(rut);
-        }
+        }*/
 
-        /*
+        
         [WebMethod(Description = "eliminar los datos del conductor")]
         public ResponseTransaction eliminiarConductorService(string rut)
         {
@@ -76,7 +77,7 @@ namespace CapaServicio
             }
 
 
-        }*/
+        }
 
         [WebMethod(Description = "Actualiza los datos del conductor")]
         public void actualizarConductorService(Conductor conductor)
