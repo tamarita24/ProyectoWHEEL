@@ -35,10 +35,10 @@ namespace CapaGUI.ServiceConductor {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/actualizarConductorService", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IPersistentBase))]
-        void actualizarConductorService(CapaGUI.ServiceConductor.Conductor conductor);
+        CapaGUI.ServiceConductor.ResponseTransaction actualizarConductorService(CapaGUI.ServiceConductor.Conductor conductor);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/actualizarConductorService", ReplyAction="*")]
-        System.Threading.Tasks.Task actualizarConductorServiceAsync(CapaGUI.ServiceConductor.Conductor conductor);
+        System.Threading.Tasks.Task<CapaGUI.ServiceConductor.ResponseTransaction> actualizarConductorServiceAsync(CapaGUI.ServiceConductor.Conductor conductor);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/buscarConductorService", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -503,11 +503,11 @@ namespace CapaGUI.ServiceConductor {
             return base.Channel.eliminiarConductorServiceAsync(rut);
         }
         
-        public void actualizarConductorService(CapaGUI.ServiceConductor.Conductor conductor) {
-            base.Channel.actualizarConductorService(conductor);
+        public CapaGUI.ServiceConductor.ResponseTransaction actualizarConductorService(CapaGUI.ServiceConductor.Conductor conductor) {
+            return base.Channel.actualizarConductorService(conductor);
         }
         
-        public System.Threading.Tasks.Task actualizarConductorServiceAsync(CapaGUI.ServiceConductor.Conductor conductor) {
+        public System.Threading.Tasks.Task<CapaGUI.ServiceConductor.ResponseTransaction> actualizarConductorServiceAsync(CapaGUI.ServiceConductor.Conductor conductor) {
             return base.Channel.actualizarConductorServiceAsync(conductor);
         }
         

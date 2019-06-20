@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.txtRut = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.conductorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,44 +42,6 @@
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarConductor)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(240, 49);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 33);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(335, 301);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(97, 33);
-            this.btnLimpiar.TabIndex = 31;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // txtRut
-            // 
-            this.txtRut.Location = new System.Drawing.Point(54, 56);
-            this.txtRut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtRut.Name = "txtRut";
-            this.txtRut.Size = new System.Drawing.Size(165, 20);
-            this.txtRut.TabIndex = 25;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 58);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "RUT";
             // 
             // menuStrip1
             // 
@@ -151,7 +109,7 @@
             // 
             this.dgvListarConductor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListarConductor.Location = new System.Drawing.Point(21, 108);
-            this.dgvListarConductor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvListarConductor.Margin = new System.Windows.Forms.Padding(2);
             this.dgvListarConductor.Name = "dgvListarConductor";
             this.dgvListarConductor.RowTemplate.Height = 24;
             this.dgvListarConductor.Size = new System.Drawing.Size(538, 175);
@@ -159,8 +117,8 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(220, 301);
-            this.btnListar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListar.Location = new System.Drawing.Point(330, 301);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(2);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(100, 33);
             this.btnListar.TabIndex = 36;
@@ -186,12 +144,8 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.dgvListarConductor);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.txtRut);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MantenedorConductorListar";
             this.Text = "MantenedorConductorListar";
             this.menuStrip1.ResumeLayout(false);
@@ -203,11 +157,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.TextBox txtRut;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem conductorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;

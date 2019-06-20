@@ -79,7 +79,11 @@
         </s:complexType>
       </s:element>
       <s:element name="actualizarConductorServiceResponse">
-        <s:complexType />
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actualizarConductorServiceResult" type="tns:ResponseTransaction" />
+          </s:sequence>
+        </s:complexType>
       </s:element>
       <s:element name="buscarConductorService">
         <s:complexType>

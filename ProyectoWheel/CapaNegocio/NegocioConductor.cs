@@ -45,6 +45,8 @@ namespace CapaNegocio
             this.configurarConexion();
             this.Conec1.CadenaSQL = "DELETE FROM " + this.Conec1.NombreTabla
                                     + " WHERE rut = '" + rut + "';";
+            this.Conec1.EsSelect = false;
+            this.Conec1.conectar();
         }
 
         public void actualizarConductor(Conductor conductor)
@@ -53,10 +55,10 @@ namespace CapaNegocio
             this.Conec1.CadenaSQL = "UPDATE " + this.Conec1.NombreTabla
                                     + " SET"
                                     + " nombres = '" + conductor.Nombres  
-                                    + "' apellido_paterno = '" + conductor.Apellido_paterno 
-                                    + "' apellido_materno = '" + conductor.Apellido_materno 
-                                    + "' sexo = '" + conductor.Sexo 
-                                    + "' telefono = '" + conductor.Telefono
+                                    + "' ,apellido_paterno = '" + conductor.Apellido_paterno 
+                                    + "' ,apellido_materno = '" + conductor.Apellido_materno 
+                                    + "' ,sexo = '" + conductor.Sexo 
+                                    + "' ,telefono = '" + conductor.Telefono
                                     + "' WHERE rut = '" + conductor.Rut + "';";
             this.Conec1.EsSelect = false;
             this.Conec1.conectar();
@@ -92,7 +94,7 @@ namespace CapaNegocio
                 auxConductor1.Apellido_paterno = "";
                 auxConductor1.Apellido_materno = "";
                 
-                //auxConductor1.Sexo = "Femenino" ;
+                auxConductor1.Sexo = "";
                 auxConductor1.Telefono = 0;
 
             }

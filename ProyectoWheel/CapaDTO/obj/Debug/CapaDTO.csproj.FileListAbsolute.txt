@@ -16,3 +16,9 @@ C:\Users\Walden\Desktop\ProyectoWHEEL\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\De
 C:\Users\Walden\Desktop\ProyectoWHEEL\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.csproj.CoreCompileInputs.cache
 C:\Users\Walden\Desktop\ProyectoWHEEL\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.dll
 C:\Users\Walden\Desktop\ProyectoWHEEL\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.pdb
+C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaDTO\bin\Debug\CapaDTO.dll
+C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaDTO\bin\Debug\CapaDTO.pdb
+C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.csprojResolveAssemblyReference.cache
+C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.csproj.CoreCompileInputs.cache
+C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.dll
+C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaDTO\obj\Debug\CapaDTO.pdb

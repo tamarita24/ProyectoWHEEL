@@ -34,6 +34,8 @@ namespace CapaGUI
         {
             this.desHabilitar();
             this.btnGuardar.Text = "Nuevo";
+            this.btnEditar.Enabled = true;
+            this.btnEliminar.Enabled = true;
         }
 
         public void habilitar()
@@ -117,7 +119,7 @@ namespace CapaGUI
                             MessageBox.Show("Conductor ya existe ", "Sistema");
                         }
 
-                        this.desHabilitar();
+                        
                         this.limpiar();
                         this.btnGuardar.Text = "Nuevo";
                         this.btnBuscar.Enabled = true;
@@ -155,7 +157,7 @@ namespace CapaGUI
             }
         }
 
-        /*
+        
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
@@ -205,7 +207,7 @@ namespace CapaGUI
                 return;
             }
         }
-        */
+        
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -224,10 +226,21 @@ namespace CapaGUI
                 this.txtNombre.Text = auxConductor.Nombres;
                 this.txtApPaterno.Text = auxConductor.Apellido_paterno;
                 this.txtApMaterno.Text = auxConductor.Apellido_paterno;
-                this.rbFemenino.Text = auxConductor.Sexo;
-                this.rbMasculino.Text = auxConductor.Sexo;
+
+                if(this.rbFemenino.Text == auxConductor.Sexo)
+                {
+                    this.rbFemenino.Checked = true;
+                }
+                else
+                {
+                    this.rbMasculino.Checked = true;
+                }
+                
                 this.txtTelefono.Text = Convert.ToString(auxConductor.Telefono);
                 this.btnGuardar.Enabled = false;
+                this.btnEditar.Enabled = true;
+                this.btnEliminar.Enabled = true;
+                this.habilitar();
 
             }
             
@@ -269,13 +282,15 @@ namespace CapaGUI
 
                         auxServiceConductor.actualizarConductorService(auxConductor2);
                         MessageBox.Show("Datos Actualizados Exitosamente ", "Sistema");
-                        this.limpiar();
-
+                        
+                        this.btnGuardar.Enabled = true;
+                        this.btnEditar.Enabled = false;
+                        this.btnEliminar.Enabled = false;
                         this.desHabilitar();
                         this.limpiar();
                         this.btnGuardar.Text = "Nuevo";
                         this.btnBuscar.Enabled = true;
-                        this.btnGuardar.Enabled = true;
+                        
 
                         this.btnSalir.Text = "Salir";
                         
@@ -291,7 +306,7 @@ namespace CapaGUI
             {
 
                 MessageBox.Show(ex.Message);
-            }*/
+            }
 
         }
 
@@ -320,8 +335,18 @@ namespace CapaGUI
 
                             auxServiceConductor.eliminiarConductorService(this.txtRut.Text);
                             MessageBox.Show("Conductor fue eliminada exitosamente", "Sistema");
-                            this.btnListar.Text = "Listar";
+                           
+                            this.btnGuardar.Enabled = true;
+                            this.btnEditar.Enabled = false;
+                            this.btnEliminar.Enabled = false;
+                            this.desHabilitar();
                             this.limpiar();
+                            this.btnGuardar.Text = "Nuevo";
+                            this.btnBuscar.Enabled = true;
+
+
+                            this.btnSalir.Text = "Salir";
+
                             txtRut.Focus();
                         }
                     }
@@ -338,6 +363,11 @@ namespace CapaGUI
         {
             MantenedorConductorListar pListado = new MantenedorConductorListar();
             pListado.ShowDialog();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.limpiar();
         }
     }
 }

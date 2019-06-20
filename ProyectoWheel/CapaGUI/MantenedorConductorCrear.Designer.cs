@@ -69,7 +69,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(598, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(585, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -139,6 +139,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(165, 20);
             this.txtNombre.TabIndex = 2;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtApPaterno
             // 
@@ -147,6 +148,7 @@
             this.txtApPaterno.Name = "txtApPaterno";
             this.txtApPaterno.Size = new System.Drawing.Size(165, 20);
             this.txtApPaterno.TabIndex = 4;
+            this.txtApPaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApPaterno_KeyPress);
             // 
             // label2
             // 
@@ -165,6 +167,7 @@
             this.txtApMaterno.Name = "txtApMaterno";
             this.txtApMaterno.Size = new System.Drawing.Size(165, 20);
             this.txtApMaterno.TabIndex = 6;
+            this.txtApMaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApMaterno_KeyPress);
             // 
             // label3
             // 
@@ -183,6 +186,7 @@
             this.txtRut.Name = "txtRut";
             this.txtRut.Size = new System.Drawing.Size(101, 20);
             this.txtRut.TabIndex = 8;
+            this.txtRut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRut_KeyPress);
             // 
             // label4
             // 
@@ -223,6 +227,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(165, 20);
             this.txtTelefono.TabIndex = 13;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label6
             // 
@@ -236,20 +241,21 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(368, 229);
+            this.btnLimpiar.Location = new System.Drawing.Point(359, 215);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(61, 33);
             this.btnLimpiar.TabIndex = 14;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(18, 229);
+            this.btnGuardar.Location = new System.Drawing.Point(70, 215);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(88, 33);
+            this.btnGuardar.Size = new System.Drawing.Size(72, 33);
             this.btnGuardar.TabIndex = 15;
             this.btnGuardar.Text = "Grabar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -268,7 +274,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(130, 229);
+            this.btnEditar.Location = new System.Drawing.Point(165, 215);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(78, 33);
             this.btnEditar.TabIndex = 17;
@@ -278,9 +284,9 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(471, 229);
+            this.btnSalir.Location = new System.Drawing.Point(446, 215);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(102, 33);
+            this.btnSalir.Size = new System.Drawing.Size(66, 33);
             this.btnSalir.TabIndex = 18;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -299,9 +305,9 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(252, 229);
+            this.btnEliminar.Location = new System.Drawing.Point(269, 215);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(74, 33);
+            this.btnEliminar.Size = new System.Drawing.Size(65, 33);
             this.btnEliminar.TabIndex = 20;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -309,7 +315,7 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(485, 292);
+            this.btnListar.Location = new System.Drawing.Point(499, 283);
             this.btnListar.Margin = new System.Windows.Forms.Padding(2);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(61, 33);
@@ -322,7 +328,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 336);
+            this.ClientSize = new System.Drawing.Size(585, 336);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.groupBox1);
