@@ -26,3 +26,15 @@ C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.exe
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.pdb
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.csprojResolveAssemblyReference.cache
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaGui\bin\Debug\CapaGUI.exe.config
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaGui\bin\Debug\CapaGUI.exe
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaGui\bin\Debug\CapaGUI.pdb
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.csprojResolveAssemblyReference.cache
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.MantenedorConductorCrear.resources
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.MantenedorConductorListar.resources
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.MantenedorViajeCrear.resources
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.Properties.Resources.resources
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.csproj.GenerateResource.cache
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.csproj.CoreCompileInputs.cache
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.exe
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.pdb

@@ -21,3 +21,9 @@ C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\bin\Debug\Cap
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.csproj.CoreCompileInputs.cache
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.dll
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.pdb
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaConexion\bin\Debug\CapaConexion.dll
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaConexion\bin\Debug\CapaConexion.pdb
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.csprojResolveAssemblyReference.cache
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.csproj.CoreCompileInputs.cache
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.dll
+C:\Users\Tamy\Documents\Proyecto integracion\ProyectoWHEEL\ProyectoWheel\CapaConexion\obj\Debug\CapaConexion.pdb
