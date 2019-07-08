@@ -18,7 +18,6 @@ C:\Users\Tamy\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.cs
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\bin\Debug\CapaGUI.exe.config
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\bin\Debug\CapaGUI.exe
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\bin\Debug\CapaGUI.pdb
-C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.csprojResolveAssemblyReference.cache
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.MantenedorConductorCrear.resources
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.MantenedorConductorListar.resources
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.Properties.Resources.resources
@@ -26,3 +25,4 @@ C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.csproj.CoreCompileInputs.cache
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.exe
 C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.pdb
+C:\Users\Walden\Documents\ProyectoWHEEL\ProyectoWheel\CapaGui\obj\Debug\CapaGUI.csprojResolveAssemblyReference.cache

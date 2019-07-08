@@ -110,10 +110,5 @@ namespace CapaNegocio
             this.Conec1.conectar();
             return this.Conec1.DbDataSet;
         }//Fin retorna conductor
-
-        public Conductor insertarConductor(FilterConductor filterConductor)
-        {
-            throw new NotImplementedException();
-        }
     }//fin
 }

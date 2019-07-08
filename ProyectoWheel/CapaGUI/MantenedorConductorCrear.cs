@@ -113,6 +113,7 @@ namespace CapaGUI
                             auxServiceConductor.insertarConductorService(auxConductor);
                             MessageBox.Show("Datos Guardados ", "Sistema");
                             this.limpiar();
+                            this.desHabilitar();
                         }
                         else
                         {
@@ -147,6 +148,7 @@ namespace CapaGUI
             }
             else
             {
+
                 this.desHabilitar();
                 this.limpiar();
                 this.btnGuardar.Text = "Nuevo";
@@ -217,31 +219,38 @@ namespace CapaGUI
 
             if (String.IsNullOrEmpty(txtRut.Text))
             {
-                MessageBox.Show("Debe ingresar un rut");
+                MessageBox.Show("Debe ingresar un Rut");
             }
             else 
             {
-                auxConductor = auxServiceConductor.buscarConductorService(txtRut.Text);
-                this.txtRut.Text = auxConductor.Rut;
-                this.txtNombre.Text = auxConductor.Nombres;
-                this.txtApPaterno.Text = auxConductor.Apellido_paterno;
-                this.txtApMaterno.Text = auxConductor.Apellido_paterno;
-
-                if(this.rbFemenino.Text == auxConductor.Sexo)
+                if (String.IsNullOrEmpty(auxServiceConductor.buscarConductorService(this.txtRut.Text).Rut))
                 {
-                    this.rbFemenino.Checked = true;
+                    MessageBox.Show("El Rut ingresado no existe");
                 }
                 else
                 {
-                    this.rbMasculino.Checked = true;
+                    auxConductor = auxServiceConductor.buscarConductorService(txtRut.Text);
+                    this.txtRut.Text = auxConductor.Rut;
+                    this.txtNombre.Text = auxConductor.Nombres;
+                    this.txtApPaterno.Text = auxConductor.Apellido_paterno;
+                    this.txtApMaterno.Text = auxConductor.Apellido_paterno;
+
+                    if (this.rbFemenino.Text == auxConductor.Sexo)
+                    {
+                        this.rbFemenino.Checked = true;
+                    }
+                    else
+                    {
+                        this.rbMasculino.Checked = true;
+                    }
+
+                    this.txtTelefono.Text = Convert.ToString(auxConductor.Telefono);
+                    this.btnGuardar.Enabled = false;
+                    this.btnEditar.Enabled = true;
+                    this.btnEliminar.Enabled = true;
+                    this.habilitar();
                 }
                 
-                this.txtTelefono.Text = Convert.ToString(auxConductor.Telefono);
-                this.btnGuardar.Enabled = false;
-                this.btnEditar.Enabled = true;
-                this.btnEliminar.Enabled = true;
-                this.habilitar();
-
             }
             
             
@@ -254,7 +263,7 @@ namespace CapaGUI
             {
                 if (this.txtRut.Text == "")
                 {
-                    MessageBox.Show("Ingrese un Rut");
+                    MessageBox.Show("Debe ingresar un Rut");
                 }
                 else
                 {
@@ -327,6 +336,7 @@ namespace CapaGUI
                     if (auxServiceConductor.buscarConductorService((this.txtRut.Text)).Rut.Equals(0))
                     {
                         MessageBox.Show("El Rut no existe");
+                        this.limpiar();
                     }
                     else
                     {
@@ -368,6 +378,7 @@ namespace CapaGUI
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             this.limpiar();
+            this.btnGuardar.Enabled = true;
         }
     }
 }
