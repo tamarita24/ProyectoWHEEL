@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.conductorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ViajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -59,7 +59,7 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.conductorToolStripMenuItem,
+            this.ViajeToolStripMenuItem,
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -68,18 +68,19 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // conductorToolStripMenuItem
+            // ViajeToolStripMenuItem
             // 
-            this.conductorToolStripMenuItem.Name = "conductorToolStripMenuItem";
-            this.conductorToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.conductorToolStripMenuItem.Text = "Viaje";
-            
+            this.ViajeToolStripMenuItem.Name = "ViajeToolStripMenuItem";
+            this.ViajeToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
+            this.ViajeToolStripMenuItem.Text = "Mantenedor Viaje";
+            this.ViajeToolStripMenuItem.Click += new System.EventHandler(this.ViajeToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.ayudaToolStripMenuItem.Text = "Salir";
+            this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -325,7 +326,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem conductorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ViajeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombre;

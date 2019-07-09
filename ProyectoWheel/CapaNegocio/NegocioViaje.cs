@@ -31,8 +31,8 @@ namespace CapaNegocio
         {
             this.configurarConexion();
             this.Conec1.CadenaSQL = "INSERT INTO " + this.Conec1.NombreTabla
-                                    + " (id_viaje,fecha_viaje,distancia,tarifa_viaje,id_servicio,rut,lugar_destino,lugar_origen,id_pago) VALUES ('"
-                                    + viaje.Id_viaje + "','" + viaje.Fecha_viaje + "','" + viaje.Distancia + "','" + viaje.Tarifa_viaje + "','" + viaje.Id_servicio + "', '" + viaje.Rut + "', '" + viaje.Lugar_destino + "', '" + viaje.Lugar_origen + "', '" + viaje.Id_pago + "');";
+                                    + " (id_viaje,fecha_viaje,distancia,tarifa_viaje,nombre_servicio,rut,lugar_destino,lugar_origen,id_pago) VALUES ('"
+                                    + viaje.Id_viaje + "','" + viaje.Fecha_viaje + "','" + viaje.Distancia + "','" + viaje.Tarifa_viaje + "','" + viaje.Nombre_servicio + "', '" + viaje.Rut + "', '" + viaje.Lugar_destino + "', '" + viaje.Lugar_origen + "', '" + viaje.Id_pago + "');";
             this.Conec1.EsSelect = false;
             this.Conec1.conectar();
 
@@ -55,7 +55,7 @@ namespace CapaNegocio
                                     + " fecha_viaje = '" + viaje.Fecha_viaje
                                     + "' ,distancia = '" + viaje.Distancia
                                     + "' ,tarifa_viaje = '" + viaje.Tarifa_viaje
-                                    + "' ,id_servicio = '" + viaje.Id_servicio
+                                    + "' ,nombre_servicio = '" + viaje.Nombre_servicio
                                     + "' ,rut = '" + viaje.Rut
                                     + "' ,lugar_destino = '" + viaje.Lugar_destino
                                     + "' ,lugar_origen = '" + viaje.Lugar_origen
@@ -83,7 +83,7 @@ namespace CapaNegocio
 
                 auxViaje.Distancia = (Int32)dt.Rows[0]["distancia"];
                 auxViaje.Tarifa_viaje = (Int32)dt.Rows[0]["tarifa_viaje"];
-                auxViaje.Id_servicio = (Int32)dt.Rows[0]["id_servicio"];
+                auxViaje.Nombre_servicio = (string)dt.Rows[0]["id_servicio"];
                 auxViaje.Rut = (String)dt.Rows[0]["rut"];
                 auxViaje.Lugar_destino = (String)dt.Rows[0]["lugar_destino"];
                 auxViaje.Lugar_origen = (String)dt.Rows[0]["lugar_origen"];
@@ -98,7 +98,7 @@ namespace CapaNegocio
                 auxViaje.Distancia = 0;
                 auxViaje.Tarifa_viaje = 0;
 
-                auxViaje.Id_servicio = 0;
+                auxViaje.Nombre_servicio = "";
                 auxViaje.Rut = "";
                 auxViaje.Lugar_destino = "";
                 auxViaje.Lugar_origen = "";

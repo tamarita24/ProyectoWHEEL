@@ -14,7 +14,7 @@
           <s:element minOccurs="1" maxOccurs="1" name="Id_pago" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="Fecha_pago" type="s:dateTime" />
           <s:element minOccurs="1" maxOccurs="1" name="Total_pago" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="Id_tipopago" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre_tipopago" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:element name="insertarPagoServiceResponse">

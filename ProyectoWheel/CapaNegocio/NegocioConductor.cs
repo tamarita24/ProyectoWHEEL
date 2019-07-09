@@ -110,5 +110,16 @@ namespace CapaNegocio
             this.Conec1.conectar();
             return this.Conec1.DbDataSet;
         }//Fin retorna conductor
+
+        public DataTable MostrarNombreConductor()
+        {
+            this.configurarConexion();
+            
+            this.Conec1.CadenaSQL = "SELECT * FROM " + this.Conec1.NombreTabla;
+            this.Conec1.EsSelect = true;
+            this.Conec1.conectar();
+            return this.Conec1.DbDataSet.Tables[this.Conec1.NombreTabla];
+        }
+
     }//fin
 }

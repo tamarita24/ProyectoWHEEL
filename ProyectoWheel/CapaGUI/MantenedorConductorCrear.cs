@@ -381,6 +381,15 @@ namespace CapaGUI
             this.btnGuardar.Enabled = true;
         }
 
-        
+        private void ViajeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenedorViaje pViaje = new MantenedorViaje();
+            pViaje.ShowDialog();
+        }
+
+        private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

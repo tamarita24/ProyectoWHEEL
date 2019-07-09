@@ -53,7 +53,7 @@ namespace CapaGUI.ServicePago {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -66,7 +66,7 @@ namespace CapaGUI.ServicePago {
         
         private int total_pagoField;
         
-        private int id_tipopagoField;
+        private string nombre_tipopagoField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -106,13 +106,13 @@ namespace CapaGUI.ServicePago {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public int Id_tipopago {
+        public string Nombre_tipopago {
             get {
-                return this.id_tipopagoField;
+                return this.nombre_tipopagoField;
             }
             set {
-                this.id_tipopagoField = value;
-                this.RaisePropertyChanged("Id_tipopago");
+                this.nombre_tipopagoField = value;
+                this.RaisePropertyChanged("Nombre_tipopago");
             }
         }
         

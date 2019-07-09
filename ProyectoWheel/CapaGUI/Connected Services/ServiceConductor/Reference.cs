@@ -55,6 +55,14 @@ namespace CapaGUI.ServiceConductor {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/retornaConductorService", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> retornaConductorServiceAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MostrarNomConductorService", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IPersistentBase))]
+        System.Data.DataTable MostrarNomConductorService();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MostrarNomConductorService", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataTable> MostrarNomConductorServiceAsync();
     }
     
     /// <remarks/>
@@ -525,6 +533,14 @@ namespace CapaGUI.ServiceConductor {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> retornaConductorServiceAsync() {
             return base.Channel.retornaConductorServiceAsync();
+        }
+        
+        public System.Data.DataTable MostrarNomConductorService() {
+            return base.Channel.MostrarNomConductorService();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> MostrarNomConductorServiceAsync() {
+            return base.Channel.MostrarNomConductorServiceAsync();
         }
     }
 }

@@ -15,7 +15,7 @@
           <s:element minOccurs="1" maxOccurs="1" name="Fecha_viaje" type="s:dateTime" />
           <s:element minOccurs="1" maxOccurs="1" name="Distancia" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="Tarifa_viaje" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="Id_servicio" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre_servicio" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Rut" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Lugar_destino" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Lugar_origen" type="s:string" />

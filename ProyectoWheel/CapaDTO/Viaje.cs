@@ -12,7 +12,7 @@ namespace CapaDTO
         private DateTime fecha_viaje;
         private int distancia;
         private int tarifa_viaje;
-        private int id_servicio;
+        private string nombre_servicio;
         private string rut;
         private string lugar_destino;
         private string lugar_origen;
@@ -22,7 +22,7 @@ namespace CapaDTO
         public DateTime Fecha_viaje { get => fecha_viaje; set => fecha_viaje = value; }
         public int Distancia { get => distancia; set => distancia = value; }
         public int Tarifa_viaje { get => tarifa_viaje; set => tarifa_viaje = value; }
-        public int Id_servicio { get => id_servicio; set => id_servicio = value; }
+        public string Nombre_servicio { get => nombre_servicio; set => nombre_servicio = value; }
         public string Rut { get => rut; set => rut = value; }
         public string Lugar_destino { get => lugar_destino; set => lugar_destino = value; }
         public string Lugar_origen { get => lugar_origen; set => lugar_origen = value; }

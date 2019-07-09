@@ -31,8 +31,8 @@ namespace CapaNegocio
         {
             this.configurarConexion();
             this.Conec1.CadenaSQL = "INSERT INTO " + this.Conec1.NombreTabla
-                                    + " (id_pago,fecha_pago,total_pago,id_tipopago) VALUES ('"
-                                    + pago.Id_pago + "','" + pago.Fecha_pago + "','" + pago.Total_pago + "','" + pago.Id_tipopago + "');";
+                                    + " (id_pago,fecha_pago,total_pago,nombre_tipopago) VALUES ('"
+                                    + pago.Id_pago + "','" + pago.Fecha_pago + "','" + pago.Total_pago + "','" + pago.Nombre_tipopago + "');";
             this.Conec1.EsSelect = false;
             this.Conec1.conectar();
 
@@ -54,7 +54,7 @@ namespace CapaNegocio
                                     + " SET"
                                     + " fecha_pago = '" + pago.Fecha_pago
                                     + "' ,total_pago = '" + pago.Total_pago
-                                    + "' ,id_tipopago = '" + pago.Id_tipopago
+                                    + "' ,nombre_tipopago = '" + pago.Nombre_tipopago
                                     + "' WHERE id_pago = '" + pago.Id_pago + "';";
             this.Conec1.EsSelect = false;
             this.Conec1.conectar();
@@ -77,7 +77,7 @@ namespace CapaNegocio
                 auxPago.Fecha_pago = (DateTime)dt.Rows[0]["fecha_pago"];
 
                 auxPago.Total_pago = (Int32)dt.Rows[0]["total_pago"];
-                auxPago.Id_tipopago = (Int32)dt.Rows[0]["id_tipopago"];
+                auxPago.Nombre_tipopago = (String)dt.Rows[0]["nombre_tipopago"];
                
             }
             catch (Exception ex)
@@ -86,7 +86,7 @@ namespace CapaNegocio
                 auxPago.Id_pago = 0;
                 //auxPago.Fecha_pago = "";
                 auxPago.Total_pago = 0;
-                auxPago.Id_tipopago = 0;
+                auxPago.Nombre_tipopago = "";
 
               
 

@@ -116,6 +116,23 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="MostrarNomConductorService">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarNomConductorServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarNomConductorServiceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="insertarConductorServiceSoapIn">
@@ -148,6 +165,12 @@
   <wsdl:message name="retornaConductorServiceSoapOut">
     <wsdl:part name="parameters" element="tns:retornaConductorServiceResponse" />
   </wsdl:message>
+  <wsdl:message name="MostrarNomConductorServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarNomConductorService" />
+  </wsdl:message>
+  <wsdl:message name="MostrarNomConductorServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarNomConductorServiceResponse" />
+  </wsdl:message>
   <wsdl:portType name="WebServiceMantenedorConductorSoap">
     <wsdl:operation name="insertarConductorService">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">insertar un conductor</wsdl:documentation>
@@ -173,6 +196,10 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un conductor</wsdl:documentation>
       <wsdl:input message="tns:retornaConductorServiceSoapIn" />
       <wsdl:output message="tns:retornaConductorServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarNomConductorService">
+      <wsdl:input message="tns:MostrarNomConductorServiceSoapIn" />
+      <wsdl:output message="tns:MostrarNomConductorServiceSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebServiceMantenedorConductorSoap" type="tns:WebServiceMantenedorConductorSoap">
@@ -222,6 +249,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="MostrarNomConductorService">
+      <soap:operation soapAction="http://tempuri.org/MostrarNomConductorService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WebServiceMantenedorConductorSoap12" type="tns:WebServiceMantenedorConductorSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -263,6 +299,15 @@
     </wsdl:operation>
     <wsdl:operation name="retornaConductorService">
       <soap12:operation soapAction="http://tempuri.org/retornaConductorService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarNomConductorService">
+      <soap12:operation soapAction="http://tempuri.org/MostrarNomConductorService" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

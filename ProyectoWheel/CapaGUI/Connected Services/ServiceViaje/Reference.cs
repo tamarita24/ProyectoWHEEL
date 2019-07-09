@@ -53,7 +53,7 @@ namespace CapaGUI.ServiceViaje {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -68,7 +68,7 @@ namespace CapaGUI.ServiceViaje {
         
         private int tarifa_viajeField;
         
-        private int id_servicioField;
+        private string nombre_servicioField;
         
         private string rutField;
         
@@ -128,13 +128,13 @@ namespace CapaGUI.ServiceViaje {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public int Id_servicio {
+        public string Nombre_servicio {
             get {
-                return this.id_servicioField;
+                return this.nombre_servicioField;
             }
             set {
-                this.id_servicioField = value;
-                this.RaisePropertyChanged("Id_servicio");
+                this.nombre_servicioField = value;
+                this.RaisePropertyChanged("Nombre_servicio");
             }
         }
         

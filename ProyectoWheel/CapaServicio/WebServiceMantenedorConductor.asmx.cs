@@ -72,8 +72,6 @@ namespace CapaServicio
 
         }
 
-      
-       
         
         [WebMethod(Description = "Actualiza los datos del conductor")]
         public ResponseTransaction actualizarConductorService(Conductor conductor)
@@ -120,7 +118,15 @@ namespace CapaServicio
         }
 
 
-        
+        [WebMethod]
+        public DataTable MostrarNomConductorService()
+        {
+            NegocioConductor auxNegocioConductor = new NegocioConductor();
+            return auxNegocioConductor.MostrarNombreConductor();
+        }
+
+
+
         /*
         [WebMethod(Description = "inserta los datos de un conductor")]
         public ResponseParameterConductor insertarConductor(RequestParameterConductor requestParameterConductor)
