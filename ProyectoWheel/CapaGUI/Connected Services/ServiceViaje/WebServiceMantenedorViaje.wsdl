@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="insertarViajeService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="viaje" type="tns:Viaje" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Viaje">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id_viaje" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fecha_viaje" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Distancia" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tarifa_viaje" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Id_servicio" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rut" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lugar_destino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lugar_origen" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Id_pago" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertarViajeServiceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="eliminiarViajeService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_viaje" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminiarViajeServiceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="actualizarViajeService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="viaje" type="tns:Viaje" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarViajeServiceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="buscarViajeService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_viaje" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="buscarViajeServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="buscarViajeServiceResult" type="tns:Viaje" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retornaViajerService">
+        <s:complexType />
+      </s:element>
+      <s:element name="retornaViajerServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retornaViajerServiceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="insertarViajeServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarViajeService" />
+  </wsdl:message>
+  <wsdl:message name="insertarViajeServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarViajeServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminiarViajeServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminiarViajeService" />
+  </wsdl:message>
+  <wsdl:message name="eliminiarViajeServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminiarViajeServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarViajeServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarViajeService" />
+  </wsdl:message>
+  <wsdl:message name="actualizarViajeServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarViajeServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="buscarViajeServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:buscarViajeService" />
+  </wsdl:message>
+  <wsdl:message name="buscarViajeServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:buscarViajeServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="retornaViajerServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:retornaViajerService" />
+  </wsdl:message>
+  <wsdl:message name="retornaViajerServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:retornaViajerServiceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceMantenedorViajeSoap">
+    <wsdl:operation name="insertarViajeService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">insertar un viaje</wsdl:documentation>
+      <wsdl:input message="tns:insertarViajeServiceSoapIn" />
+      <wsdl:output message="tns:insertarViajeServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminiarViajeService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">eliminar los datos viaje</wsdl:documentation>
+      <wsdl:input message="tns:eliminiarViajeServiceSoapIn" />
+      <wsdl:output message="tns:eliminiarViajeServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarViajeService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza los datos viaje</wsdl:documentation>
+      <wsdl:input message="tns:actualizarViajeServiceSoapIn" />
+      <wsdl:output message="tns:actualizarViajeServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="buscarViajeService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">buscar un viaje</wsdl:documentation>
+      <wsdl:input message="tns:buscarViajeServiceSoapIn" />
+      <wsdl:output message="tns:buscarViajeServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retornaViajerService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un viaje</wsdl:documentation>
+      <wsdl:input message="tns:retornaViajerServiceSoapIn" />
+      <wsdl:output message="tns:retornaViajerServiceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceMantenedorViajeSoap" type="tns:WebServiceMantenedorViajeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertarViajeService">
+      <soap:operation soapAction="http://tempuri.org/insertarViajeService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminiarViajeService">
+      <soap:operation soapAction="http://tempuri.org/eliminiarViajeService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarViajeService">
+      <soap:operation soapAction="http://tempuri.org/actualizarViajeService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarViajeService">
+      <soap:operation soapAction="http://tempuri.org/buscarViajeService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retornaViajerService">
+      <soap:operation soapAction="http://tempuri.org/retornaViajerService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceMantenedorViajeSoap12" type="tns:WebServiceMantenedorViajeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertarViajeService">
+      <soap12:operation soapAction="http://tempuri.org/insertarViajeService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminiarViajeService">
+      <soap12:operation soapAction="http://tempuri.org/eliminiarViajeService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarViajeService">
+      <soap12:operation soapAction="http://tempuri.org/actualizarViajeService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarViajeService">
+      <soap12:operation soapAction="http://tempuri.org/buscarViajeService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retornaViajerService">
+      <soap12:operation soapAction="http://tempuri.org/retornaViajerService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceMantenedorViaje">
+    <wsdl:port name="WebServiceMantenedorViajeSoap" binding="tns:WebServiceMantenedorViajeSoap">
+      <soap:address location="http://localhost:2257/WebServiceMantenedorViaje.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceMantenedorViajeSoap12" binding="tns:WebServiceMantenedorViajeSoap12">
+      <soap12:address location="http://localhost:2257/WebServiceMantenedorViaje.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -53,6 +53,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServicePago\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceViaje\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="MantenedorConductorCrear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,17 +75,11 @@
     <Compile Include="MantenedorConductorListar.Designer.cs">
       <DependentUpon>MantenedorConductorListar.cs</DependentUpon>
     </Compile>
-    <Compile Include="MantenedorViajeCrear.cs">
+    <Compile Include="MantenedorViaje.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MantenedorViajeCrear.Designer.cs">
-      <DependentUpon>MantenedorViajeCrear.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MantenedorViajeListar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MantenedorViajeListar.Designer.cs">
-      <DependentUpon>MantenedorViajeListar.cs</DependentUpon>
+    <Compile Include="MantenedorViaje.Designer.cs">
+      <DependentUpon>MantenedorViaje.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,8 +89,8 @@
     <EmbeddedResource Include="MantenedorConductorListar.resx">
       <DependentUpon>MantenedorConductorListar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MantenedorViajeCrear.resx">
-      <DependentUpon>MantenedorViajeCrear.cs</DependentUpon>
+    <EmbeddedResource Include="MantenedorViaje.resx">
+      <DependentUpon>MantenedorViaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,6 +108,14 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceConductor\WebServiceMantenedorConductor.wsdl" />
+    <None Include="Connected Services\ServicePago\CapaGUI.ServicePago.Pago.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicePago\WebServiceMantenedorPago.wsdl" />
+    <None Include="Connected Services\ServiceViaje\CapaGUI.ServiceViaje.Viaje.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceViaje\WebServiceMantenedorViaje.wsdl" />
     <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -123,6 +135,8 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceConductor\" />
+    <WCFMetadataStorage Include="Connected Services\ServicePago\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceViaje\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ServiceConductor\WebServiceMantenedorConductor.disco" />
@@ -135,6 +149,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ServiceConductor\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicePago\WebServiceMantenedorPago.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicePago\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicePago\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicePago\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceViaje\WebServiceMantenedorViaje.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceViaje\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceViaje\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceViaje\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

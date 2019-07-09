@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="insertarPagoService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pago" type="tns:Pago" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Pago">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id_pago" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fecha_pago" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Total_pago" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Id_tipopago" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertarPagoServiceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="eliminiarPagoService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_pago" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminiarPagoServiceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="actualizarPagoService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pago" type="tns:Pago" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarPagoServiceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="buscarPagoService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fecha_pago" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="buscarPagoServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="buscarPagoServiceResult" type="tns:Pago" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retornaPagoService">
+        <s:complexType />
+      </s:element>
+      <s:element name="retornaPagoServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retornaPagoServiceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="insertarPagoServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarPagoService" />
+  </wsdl:message>
+  <wsdl:message name="insertarPagoServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarPagoServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminiarPagoServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminiarPagoService" />
+  </wsdl:message>
+  <wsdl:message name="eliminiarPagoServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminiarPagoServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarPagoServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarPagoService" />
+  </wsdl:message>
+  <wsdl:message name="actualizarPagoServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarPagoServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="buscarPagoServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:buscarPagoService" />
+  </wsdl:message>
+  <wsdl:message name="buscarPagoServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:buscarPagoServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="retornaPagoServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:retornaPagoService" />
+  </wsdl:message>
+  <wsdl:message name="retornaPagoServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:retornaPagoServiceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceMantenedorPagoSoap">
+    <wsdl:operation name="insertarPagoService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">insertar un pago</wsdl:documentation>
+      <wsdl:input message="tns:insertarPagoServiceSoapIn" />
+      <wsdl:output message="tns:insertarPagoServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminiarPagoService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">eliminar los datos de un pago</wsdl:documentation>
+      <wsdl:input message="tns:eliminiarPagoServiceSoapIn" />
+      <wsdl:output message="tns:eliminiarPagoServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarPagoService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza los datos del pago</wsdl:documentation>
+      <wsdl:input message="tns:actualizarPagoServiceSoapIn" />
+      <wsdl:output message="tns:actualizarPagoServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="buscarPagoService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">buscar un pago</wsdl:documentation>
+      <wsdl:input message="tns:buscarPagoServiceSoapIn" />
+      <wsdl:output message="tns:buscarPagoServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retornaPagoService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un pago</wsdl:documentation>
+      <wsdl:input message="tns:retornaPagoServiceSoapIn" />
+      <wsdl:output message="tns:retornaPagoServiceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceMantenedorPagoSoap" type="tns:WebServiceMantenedorPagoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertarPagoService">
+      <soap:operation soapAction="http://tempuri.org/insertarPagoService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminiarPagoService">
+      <soap:operation soapAction="http://tempuri.org/eliminiarPagoService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarPagoService">
+      <soap:operation soapAction="http://tempuri.org/actualizarPagoService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarPagoService">
+      <soap:operation soapAction="http://tempuri.org/buscarPagoService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retornaPagoService">
+      <soap:operation soapAction="http://tempuri.org/retornaPagoService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceMantenedorPagoSoap12" type="tns:WebServiceMantenedorPagoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertarPagoService">
+      <soap12:operation soapAction="http://tempuri.org/insertarPagoService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminiarPagoService">
+      <soap12:operation soapAction="http://tempuri.org/eliminiarPagoService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarPagoService">
+      <soap12:operation soapAction="http://tempuri.org/actualizarPagoService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarPagoService">
+      <soap12:operation soapAction="http://tempuri.org/buscarPagoService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retornaPagoService">
+      <soap12:operation soapAction="http://tempuri.org/retornaPagoService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceMantenedorPago">
+    <wsdl:port name="WebServiceMantenedorPagoSoap" binding="tns:WebServiceMantenedorPagoSoap">
+      <soap:address location="http://localhost:2257/WebServiceMantenedorPago.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceMantenedorPagoSoap12" binding="tns:WebServiceMantenedorPagoSoap12">
+      <soap12:address location="http://localhost:2257/WebServiceMantenedorPago.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

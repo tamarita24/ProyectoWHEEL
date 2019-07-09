@@ -380,5 +380,7 @@ namespace CapaGUI
             this.limpiar();
             this.btnGuardar.Enabled = true;
         }
+
+        
     }
 }

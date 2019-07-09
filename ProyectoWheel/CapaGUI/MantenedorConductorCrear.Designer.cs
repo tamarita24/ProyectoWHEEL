@@ -30,12 +30,7 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.conductorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApPaterno = new System.Windows.Forms.TextBox();
@@ -75,52 +70,16 @@
             // 
             // conductorToolStripMenuItem
             // 
-            this.conductorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoToolStripMenuItem,
-            this.editarToolStripMenuItem,
-            this.buscarToolStripMenuItem,
-            this.eliminarToolStripMenuItem});
             this.conductorToolStripMenuItem.Name = "conductorToolStripMenuItem";
-            this.conductorToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.conductorToolStripMenuItem.Text = "Conductor";
-            // 
-            // nuevoToolStripMenuItem
-            // 
-            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.nuevoToolStripMenuItem.Text = "Nuevo";
-            // 
-            // editarToolStripMenuItem
-            // 
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.editarToolStripMenuItem.Text = "Editar";
-            // 
-            // buscarToolStripMenuItem
-            // 
-            this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.buscarToolStripMenuItem.Text = "Buscar";
-            // 
-            // eliminarToolStripMenuItem
-            // 
-            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.conductorToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.conductorToolStripMenuItem.Text = "Viaje";
+            
             // 
             // ayudaToolStripMenuItem
             // 
-            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salirToolStripMenuItem});
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.ayudaToolStripMenuItem.Text = "Salir";
             // 
             // label1
             // 
@@ -367,12 +326,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem conductorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApPaterno;
