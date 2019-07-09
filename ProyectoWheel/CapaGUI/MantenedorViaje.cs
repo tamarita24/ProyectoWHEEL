@@ -133,8 +133,9 @@ namespace CapaGUI
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            this.limpiar();
-            this.btnGuardar.Enabled = true;
+
+            /*this.limpiar();
+            this.btnGuardar.Enabled = true;*/
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
